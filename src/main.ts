@@ -28,8 +28,11 @@ export class MainApp {
 
     private listenToClick(): void {
         let self = this;
-        document.body.onclick = function(e){
+        this._colorBackgroundElement.onclick = function(e){
             self.changeBackgroundColor();
+        }
+        this._colorCodeElement.onclick = function(e) {
+            e.stopPropagation();
         }
     }
 }

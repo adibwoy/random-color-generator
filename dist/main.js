@@ -24,8 +24,11 @@ var MainApp = (function () {
     };
     MainApp.prototype.listenToClick = function () {
         var self = this;
-        document.body.onclick = function (e) {
+        this._colorBackgroundElement.onclick = function (e) {
             self.changeBackgroundColor();
+        };
+        this._colorCodeElement.onclick = function (e) {
+            e.stopPropagation();
         };
     };
     return MainApp;
