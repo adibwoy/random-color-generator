@@ -4,6 +4,7 @@ export class MainApp {
 
     private _colorBackgroundElement: HTMLElement = document.getElementById("color-background");
     private _colorCodeElement: HTMLElement = document.getElementById("color-code");
+    private _messageElement: HTMLElement = document.getElementById("message");
 
     constructor() {
         this.listenToSpaceBar();
@@ -31,8 +32,8 @@ export class MainApp {
         this._colorBackgroundElement.onclick = function(e){
             self.changeBackgroundColor();
         }
-        this._colorCodeElement.onclick = function(e) {
-            e.stopPropagation();
+        this._messageElement.onclick = function(e){
+            self.changeBackgroundColor();
         }
     }
 }

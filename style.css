@@ -19,7 +19,7 @@ body {
     height: 100vh;
 }
 
-.message,
+#message,
 #color-code {
     position: absolute;
 
@@ -36,6 +36,6 @@ body {
     bottom: 12px;
 }
 
-.message {
+#message {
     top: 12px;
 }

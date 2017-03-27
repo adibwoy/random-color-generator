@@ -5,6 +5,7 @@ var MainApp = (function () {
     function MainApp() {
         this._colorBackgroundElement = document.getElementById("color-background");
         this._colorCodeElement = document.getElementById("color-code");
+        this._messageElement = document.getElementById("message");
         this.listenToSpaceBar();
         this.listenToClick();
         this.changeBackgroundColor();
@@ -27,8 +28,8 @@ var MainApp = (function () {
         this._colorBackgroundElement.onclick = function (e) {
             self.changeBackgroundColor();
         };
-        this._colorCodeElement.onclick = function (e) {
-            e.stopPropagation();
+        this._messageElement.onclick = function (e) {
+            self.changeBackgroundColor();
         };
     };
     return MainApp;
