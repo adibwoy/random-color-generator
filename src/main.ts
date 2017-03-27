@@ -7,6 +7,7 @@ export class MainApp {
 
     constructor() {
         this.listenToSpaceBar();
+        this.listenToClick();
         this.changeBackgroundColor();
     }
 
@@ -22,6 +23,13 @@ export class MainApp {
             if(e.keyCode == 32){
                 self.changeBackgroundColor();
             }
+        }
+    }
+
+    private listenToClick(): void {
+        let self = this;
+        document.body.onclick = function(e){
+            self.changeBackgroundColor();
         }
     }
 }

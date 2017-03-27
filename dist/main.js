@@ -6,6 +6,7 @@ var MainApp = (function () {
         this._colorBackgroundElement = document.getElementById("color-background");
         this._colorCodeElement = document.getElementById("color-code");
         this.listenToSpaceBar();
+        this.listenToClick();
         this.changeBackgroundColor();
     }
     MainApp.prototype.changeBackgroundColor = function () {
@@ -19,6 +20,12 @@ var MainApp = (function () {
             if (e.keyCode == 32) {
                 self.changeBackgroundColor();
             }
+        };
+    };
+    MainApp.prototype.listenToClick = function () {
+        var self = this;
+        document.body.onclick = function (e) {
+            self.changeBackgroundColor();
         };
     };
     return MainApp;
