@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+    font-family: "Fredoka One";
+    letter-spacing: 0.2em;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+}
+
+#color-background {
+    height: 100vh;
+}
+
+.message,
+#color-code {
+    position: absolute;
+
+    background: black;
+    color: white;
+    padding: 12px;
+    margin: 0 auto;
+
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#color-code {
+    bottom: 12px;
+}
+
+.message {
+    top: 12px;
+}
